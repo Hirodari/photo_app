@@ -1,28 +1,34 @@
-<div class="ui mini menu">
+<div class="ui mini menu menu-set">
   <a class="active item">
-    Home
+    <%= link_to 'Home', root_path,
+    class:"#{'active' if request.path == root_path} item"%>
+
   </a>
-  <a class="item">
-    Messages
-  </a>
-  <div class="right menu">
-    <div class="ui dropdown item">
-      Language <i class="dropdown icon"></i>
-      <div class="menu">
-        <a class="item">English</a>
-        <a class="item">Russian</a>
-        <a class="item">Spanish</a>
+  <% if current_user %>
+    <a class="item">
+      Photo App
+    </a>
+    <div class="right menu">
+      <div class="ui dropdown item">
+        <%= current_user.full_name %> <i class="dropdown icon"></i>
+        <div class="menu">
+          <a><%= link_to edit_user_registration_path(current_user), class:"item" do%>
+            <i class="edit icon"></i>Edit Profile
+          <% end %></a>
+          <a class="item">Russian</a>
+          <a class="item">Spanish</a>
+        </div>
       </div>
-    </div>
-    <% if user_session %>
       <div class="item">
         <%= link_to 'Logout', destroy_user_session_path, method: :delete,
         class:"ui brown button"%>
       </div>
-    <% else %>
+    </div>
+  <% else %>
+    <div class="right menu">
       <div class="item">
-          <%= link_to 'Signup', new_user_registration_path, class:"ui primary button"%>
+          <%= link_to 'Sign In', new_user_session_path, class:"ui black button"%>
       </div>
-    <% end %>
-  </div>
+    </div>
+  <% end %>
 </div>

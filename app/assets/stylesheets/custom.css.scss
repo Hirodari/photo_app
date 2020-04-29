@@ -1,2 +1,41 @@
 @import 'bootstrap/dist/css/bootstrap';
 @import "semantic-ui";
+
+.menu-set {
+  background: #dbd7d7 !important;
+}
+
+.footer {
+  background-color: #dbd7d7;
+  height: 40px;
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  color: black;
+  padding-top: 10px !important;
+  text-align: center;
+
+}
+
+.sign-frame-css {
+  border: 1px solid #dbd7d7;
+  padding-top: 20px;
+}
+
+.sign-frame-center {
+  padding-top: 50px;
+  padding-left: 100px;
+
+}
+
+.sign-frame-font {
+  background-color: #dbd7d7;
+  width: 599px;
+}
+
+.jumbotron {
+  background-image: url("finance12.jpeg");
+  background-size: cover;
+  color: white;
+}
