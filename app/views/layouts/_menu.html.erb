@@ -14,8 +14,15 @@
         <a class="item">Spanish</a>
       </div>
     </div>
-    <div class="item">
-        <div class="ui primary button">Sign Up</div>
-    </div>
+    <% if user_session %>
+      <div class="item">
+        <%= link_to 'Logout', destroy_user_session_path, method: :delete,
+        class:"ui brown button"%>
+      </div>
+    <% else %>
+      <div class="item">
+          <%= link_to 'Signup', new_user_registration_path, class:"ui primary button"%>
+      </div>
+    <% end %>
   </div>
 </div>

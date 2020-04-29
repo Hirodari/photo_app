@@ -11,6 +11,9 @@
 
   <body>
     <%= render 'layouts/menu'%>
-    <%= yield %>
+    <div class="ui container">
+      <%= render 'layouts/notification'%>
+      <%= yield %>
+    </div>
   </body>
 </html>
