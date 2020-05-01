@@ -1,4 +1,4 @@
-Rails.application.configure do
+  Rails.application.configure do
   # Settings specified here will take precedence over those in config/application.rb.
 
   # Code is not reloaded between requests.
@@ -10,7 +10,7 @@ Rails.application.configure do
   # Rake tasks automatically ignore this option for performance.
   config.eager_load = true
   config.action_mailer.delivery_method = :smtp
-  config.action_mailer.default_url_options = { :host => 'fred-photo-app.herokuapp.com/', :protocol => 'https'}
+  config.action_mailer.default_url_options = { :host => 'fred-photo-app.herokuapp.com', :protocol => 'https'}
 
   # Full error reports are disabled and caching is turned on.
   config.consider_all_requests_local       = false
